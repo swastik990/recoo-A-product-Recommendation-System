@@ -1,6 +1,7 @@
 # recommender/views.py
 
 from django.http import JsonResponse
+from django.shortcuts import redirect, render
 from recommender.recommender_engine import load_product_data, build_similarity_matrix, get_recommendations
 
 try:
@@ -23,3 +24,6 @@ def recommend_products(request, product_id):
     except Exception as e:
         print("ERROR in recommend_products view:", e)
         return JsonResponse({"error": str(e)}, status=400)
+    
+def reco(request):
+    return render(request, 'reco.html')

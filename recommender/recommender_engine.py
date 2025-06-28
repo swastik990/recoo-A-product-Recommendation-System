@@ -1,4 +1,4 @@
-# recommender/recommender_engine.py
+# recommender/recommender_engine
 
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
